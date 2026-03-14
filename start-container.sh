@@ -14,7 +14,7 @@ docker run -itd \
                 -p 8088:8088 \
                 --name hadoop-master \
                 --hostname hadoop-master \
-                zaid.elfid/hadoop:3.4.3 &> /dev/null
+                zaidelfid/hadoop:3.4.3 &> /dev/null
 
 
 # 2. Démarrer les conteneurs hadoop-slaves
@@ -28,7 +28,7 @@ do
                     --net=hadoop \
                     --name hadoop-slave$i \
                     --hostname hadoop-slave$i \
-                    zaid.elfid/hadoop:3.4.3 &> /dev/null
+                    zaidelfid/hadoop:3.4.3 &> /dev/null
     i=$(( $i + 1 ))
 done 
 
